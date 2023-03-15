@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #161616, #202020, #2a2a2a, #343434, #3f3f3f, #404040, #424242, #434343, #3b3b3b, #343434, #2c2c2c, #252525);
+  font-family: "Poppins", sans-serif;
+  background-size: auto;
+}
+header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 87%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.site-logo img {
+  height: auto;
+  width: 30%;
+  image-resolution: 5px;
+  
+}
+.navigation_about a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 60px;
+}
+
+.navigation_about a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scalex(0);
+  transition: transform 0.5s;
+}
+
+.navigation_about a:hover::after {
+  transform: scalex(1);
+  transform-origin: left;
+}
+
+
+
+.container { 
+  margin: 170px 70px;
+  color: rgb(255, 255, 255);
+}
+
+.heading {
+  font-size: 70px;
+  color: rgb(210, 217, 193);
+}
+
+.heading span {
+  font-style: italic;
+  font-size: 40px;
+  color: #c7cd47;
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+}
+
+.profile {
+  flex-basis: 260px;
+}
+
+.profile .profile-img {
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: 800ms;
+}
+
+.profile:hover .profile-img {
+  filter: grayscale(0);
+}
+
+.user-name {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
+.profile h5 {
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #ccc;
+}
+
+.profile p {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1150px) {
+  .profiles {
+    flex-direction:column;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction:column;
+  }
+  .profile p {
+    text-align: center;
+    margin: 20px 60px 80px 60px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heading {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .heading span {
+    font-size: 15px;
+  }
+
+  .profiles {
+    margin: 20px 0;
+  }
+
+  .profile p {
+    margin: 20px 10px 80px 10px;
+  }
+}

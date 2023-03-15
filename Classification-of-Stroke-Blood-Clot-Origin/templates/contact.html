@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	<link rel="stylesheet" type="text/css" href="../static/contact.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<header>
+		<div class="site-logo">
+			<img src="../static/assets/logo1-removebg-preview.png" alt="logo">
+		</div>
+		<nav class="navigation">
+			<a href="{{ url_for('index') }}">Home</a>
+			<a href="{{ url_for('about') }}">about</a>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Contact Us</h2>
+				<input type="text" class="field" placeholder="Enter Name">
+				<input type="text" class="field" placeholder="Your Email Id">
+				<input type="text" class="field" placeholder="Phone No.">
+				<textarea placeholder="Message" class="field"></textarea>
+				<button class="btn">Send</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
